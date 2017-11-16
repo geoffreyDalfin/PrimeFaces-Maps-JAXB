@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="file:/Users/geoffreydalfin/NetBeansProjects/MapsApplication/../../Documents/EPSI/I4/TP/velib.xsd" uri="src/conf/xml-resources/jaxb/StationDetail/velib.xsd"/>
+    <system systemId="file:/Users/geoffreydalfin/NetBeansProjects/MapsApplication/../../Documents/EPSI/I4/TP/stations.xsd" uri="src/conf/xml-resources/jaxb/Arret/stations.xsd"/>
+</catalog>

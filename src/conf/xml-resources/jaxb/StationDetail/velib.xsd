@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="carto">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="markers"/>
+        <xs:element ref="arrondissements"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="markers">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="marker"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="marker">
+    <xs:complexType>
+      <xs:attribute name="address" use="required"/>
+      <xs:attribute name="bonus" use="required" type="xs:integer"/>
+      <xs:attribute name="fullAddress" use="required"/>
+      <xs:attribute name="lat" use="required" type="xs:decimal"/>
+      <xs:attribute name="lng" use="required" type="xs:decimal"/>
+      <xs:attribute name="name" use="required"/>
+      <xs:attribute name="number" use="required" type="xs:integer"/>
+      <xs:attribute name="open" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="arrondissements">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="arrondissement"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="arrondissement">
+    <xs:complexType>
+      <xs:attribute name="maxLat" use="required" type="xs:decimal"/>
+      <xs:attribute name="maxLng" use="required" type="xs:decimal"/>
+      <xs:attribute name="minLat" use="required" type="xs:decimal"/>
+      <xs:attribute name="minLng" use="required" type="xs:decimal"/>
+      <xs:attribute name="number" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
